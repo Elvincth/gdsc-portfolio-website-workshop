@@ -2,11 +2,7 @@ import Image from "next/image";
 import avatarImage from "@/images/avatar.jpg";
 import heroImage from "@/images/hero-image.jpg";
 import { Button } from "@/components/Button";
-import {
-  IconArrowRight,
-  IconBriefcase,
-  IconDownload,
-} from "@tabler/icons-react";
+import { IconBriefcase, IconDownload } from "@tabler/icons-react";
 import { projects, resume } from "@/misc/data";
 import Link from "next/link";
 import { ProjectCard } from "@/components/ProjectCard";
