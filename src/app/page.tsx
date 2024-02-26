@@ -9,7 +9,7 @@ import { ProjectCard } from "@/components/ProjectCard";
 
 function Resume() {
   return (
-    <div className="rounded-2xl border border-zinc-100 p-6">
+    <div className="rounded-2xl border border-zinc-100 p-6 w-full">
       <h2 className="flex text-sm font-semibold text-zinc-900">
         <IconBriefcase className="h-6 w-6 flex-none" />
         <span className="ml-3">Work & Education</span>
@@ -93,8 +93,8 @@ export default function HomePage() {
 
           {/*  Project cards , we only want to show 2 projects here */}
           {/*  We use the splice method to get the first 2 projects */}
-          <div className="grid grid-cols-12 mt-12 gap-8">
-            {projects.splice(0, 2).map((project, projectIndex) => (
+          <div className="grid grid-cols-12 gap-8">
+            {[...projects].splice(0, 2).map((project, projectIndex) => (
               <ProjectCard
                 className="lg:col-span-6 col-span-12"
                 key={projectIndex}
@@ -106,9 +106,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <Link href="/projects" className="mt-10">
-            <Button>View All Projects</Button>
-          </Link>
+          <Button>View All Projects</Button>
         </div>
 
         <div className="lg:col-span-4 col-span-12">
