@@ -3,6 +3,7 @@ import { Header } from "@/components/Header";
 
 import "@/styles/tailwind.css";
 
+// Here we define the metadata for the site
 export const metadata: Metadata = {
   title: "John Doe - Portfolio Workshop",
   description:
