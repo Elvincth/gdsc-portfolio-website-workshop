@@ -94,6 +94,8 @@ export default function HomePage() {
           {/*  Project cards , we only want to show 2 projects here */}
           {/*  We use the splice method to get the first 2 projects */}
           <div className="grid grid-cols-12 gap-8">
+            {/*  Since the array is a reference type, we need to create a new array to avoid mutating the original array */}
+            {/*  by using the spread operator, we create a new array with the same elements */}
             {[...projects].splice(0, 2).map((project, projectIndex) => (
               <ProjectCard
                 className="lg:col-span-6 col-span-12"
