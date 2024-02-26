@@ -24,7 +24,7 @@ export function ProjectCard({
 
       <div className="mt-2 flex flex-col gap-2">
         <h2 className="text-xl font-semibold text-zinc-900">{name}</h2>
-        <p className="text-zinc-500 font-light ">{description}</p>
+        <p className="text-zinc-500 font-light">{description}</p>
 
         <Link
           target="_blank"
