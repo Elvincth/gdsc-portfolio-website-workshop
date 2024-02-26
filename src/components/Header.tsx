@@ -1,3 +1,4 @@
+// As this component have client side code, we need to add the following line to the top of the file:
 "use client";
 
 import clsx from "clsx";
@@ -5,6 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+//Here we define the navigation links
 const navigation = [
   { name: "Home", href: "/" },
   { name: "About", href: "/about" },
@@ -12,7 +14,11 @@ const navigation = [
 ];
 
 export function Header() {
+  // usePathname is a hook that returns the current pathname of the URL
+  //See: https://nextjs.org/docs/app/api-reference/functions/use-pathname
   const pathname = usePathname();
+  // useState is a hook that allows you to add state to function components
+  // it will auto re-render the component when the state changes
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [showNav, setShowNav] = useState(true);
 
@@ -21,7 +27,12 @@ export function Header() {
   useEffect(() => {
     // Function to handle scroll events
     const handleScroll = () => {
+      //We get the current scroll position by using window.scrollY
+      //The scrollY property returns the number of pixels that the document has already been scrolled vertically
       const currentScrollPos = window.scrollY;
+
+      // If the user scrolls up, show the navbar
+      // If the user scrolls down, hide the navbar
       if (prevScrollPos > currentScrollPos) {
         setShowNav(true);
         console.log("Show navbar");

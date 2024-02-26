@@ -6,6 +6,8 @@ interface ProjectCardProps {
   name: string;
   href: string;
   description: string;
+  // React.ComponentType is a type that represents a React component.
+  // Here we are using it to define the type of the icon prop.
   icon: React.ComponentType<{ className: string }>;
 }
 
