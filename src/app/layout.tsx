@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 //Here is the root layout which shared across all pages
 //This layout includes the header and the main content
 export default function RootLayout({
-  children,
+  children, // The children prop is a reserved prop in React. It is used to render the content of the component.
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode; // React.ReactNode is a type that represents any type of content that can be rendered in React.
 }) {
   return (
     <html lang="en">
