@@ -24,7 +24,7 @@ export default function ProjectsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-12 mt-12 gap-8">
+      <div className="grid grid-cols-12 mt-12 lg:gap-x-8 gap-y-8">
         {projects.map((project, projectIndex) => (
           <ProjectCard
             className="lg:col-span-3 md:col-span-6 col-span-12"

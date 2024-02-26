@@ -25,8 +25,8 @@ export default function RootLayout({
           href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>"
         />
         <Header />
-        <main className="container min-h-screen p-10">
-          <div className="pt-12">{children}</div>
+        <main className="container min-h-screen px-4 sm:px-10 py-24">
+          {children}
         </main>
       </body>
     </html>

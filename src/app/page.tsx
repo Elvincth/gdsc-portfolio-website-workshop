@@ -43,7 +43,7 @@ export default function HomePage() {
   return (
     <>
       {/*  Hero section */}
-      <section className="grid grid-cols-12 gap-9">
+      <section className="grid grid-cols-12 lg:gap-x-9 gap-y-9">
         <div className="lg:col-span-6 col-span-12">
           <Image
             src={avatarImage}
@@ -80,7 +80,7 @@ export default function HomePage() {
       </section>
 
       {/*  About section */}
-      <section className="grid grid-cols-12 mt-24 gap-9">
+      <section className="grid grid-cols-12 mt-24 lg:gap-x-9 gap-y-9">
         <div className="lg:col-span-8 col-span-12 space-y-4">
           <h2 className="text-2xl font-bold text-zinc-800">My Projects</h2>
 
@@ -93,7 +93,7 @@ export default function HomePage() {
 
           {/*  Project cards , we only want to show 2 projects here */}
           {/*  We use the splice method to get the first 2 projects */}
-          <div className="grid grid-cols-12 gap-8">
+          <div className="grid grid-cols-12 lg:gap-x-8 gap-y-8">
             {/*  Since the array is a reference type, we need to create a new array to avoid mutating the original array */}
             {/*  by using the spread operator, we create a new array with the same elements */}
             {[...projects].splice(0, 2).map((project, projectIndex) => (
@@ -108,7 +108,9 @@ export default function HomePage() {
             ))}
           </div>
 
-          <Button>View All Projects</Button>
+          <Link href="/projects">
+            <Button>View All Projects</Button>
+          </Link>
         </div>
 
         <div className="lg:col-span-4 col-span-12">
