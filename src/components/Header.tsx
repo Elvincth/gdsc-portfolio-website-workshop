@@ -16,6 +16,8 @@ export function Header() {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [showNav, setShowNav] = useState(true);
 
+  //useEffect is a hook that allows you to perform side effects in function components
+  //Here we use useEffect to add an event listener to the window object when the component mounts
   useEffect(() => {
     // Function to handle scroll events
     const handleScroll = () => {
