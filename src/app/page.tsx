@@ -32,8 +32,6 @@ export default function HomePage() {
           </p>
 
           <div className="flex gap-x-2 mt-6">
-            <Button variant="outline">View GitHub </Button>
-
             <Link href="/resume.pdf">
               <Button>
                 Download CV
