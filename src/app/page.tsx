@@ -62,10 +62,18 @@ export default function HomePage() {
       </section>
 
       {/*  Project section */}
+
+      {/*  We use the mt-24 class to add margin top */}
       <section className="mt-24">
+        {/*  We use the h2 tag to create a section heading */}
+        {/*  We also use the text-2xl class to make the heading large */}
+        {/*  We use the font-bold class to make the heading bold */}
         <h2 className="text-2xl font-bold text-zinc-800">My Projects</h2>
 
-        <p className="text-base text-zinc-600 font-light">
+        {/*  We use the p tag to create a section description */}
+        {/*  We also use the text-base class to make the description large */}
+        {/*  We use the font-light class to make the description light */}
+        <p className="text-zinc-600 font-light">
           I’ve worked on tons of little projects over the years but these are
           the ones that I’m most proud of. Many of them are open-source, so if
           you see something that piques your interest, check out the code and
