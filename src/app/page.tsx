@@ -11,13 +11,8 @@ export default function HomePage() {
   return (
     <>
       {/*  Hero section */}
-      {/*  First, we define the grid layout where we want to have 12 columns */}
-      {/*  In large screens, we want to have a gap between the columns of 9 only in the x-axis */}
-      {/*  In smaller screens, we want to have a gap between the rows of 9 only in the y-axis */}
-      <section className="grid grid-cols-12 lg:gap-x-9 gap-y-9">
-        {/*  For large screens, we want the avatar and the text to take 6 columns, so it takes half of the width */}
-        {/*  For smaller screens, we want the avatar and the text to take 12 columns , so it takes the full width */}
-        <div className="lg:col-span-6 col-span-12">
+      <section className="grid grid-cols-1 lg:grid-cols-2 gap-9">
+        <div>
           {/*  We use the Image component to load the avatar image */}
           <Image
             src={avatarImage}
@@ -50,7 +45,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="lg:col-span-6 col-span-12 max-w-sm lg:max-w-none m-auto">
+        <div className="max-w-sm lg:max-w-none m-auto">
           <Image
             className="rounded-lg"
             src={heroImage}
@@ -61,7 +56,7 @@ export default function HomePage() {
       </section>
 
       {/*  About section */}
-      <section className="mt-24 lg:gap-x-9 gap-y-9">
+      <section className="mt-24">
         <h2 className="text-2xl font-bold text-zinc-800">My Projects</h2>
 
         <p className="text-base text-zinc-600 font-light">
@@ -73,12 +68,11 @@ export default function HomePage() {
 
         {/*  Project cards , we only want to show 2 projects here */}
         {/*  We use the splice method to get the first 2 projects */}
-        <div className="grid grid-cols-12 lg:gap-x-8 gap-y-8 mt-7">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-7">
           {/*  Since the array is a reference type, we need to create a new array to avoid mutating the original array */}
           {/*  by using the spread operator, we create a new array with the same elements */}
           {[...projects].splice(0, 4).map((project, projectIndex) => (
             <ProjectCard
-              className="lg:col-span-3 col-span-12"
               key={projectIndex}
               href={project.href}
               name={project.name}

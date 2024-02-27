@@ -2,7 +2,6 @@ import { IconArrowRight } from "@tabler/icons-react";
 import Link from "next/link";
 
 interface ProjectCardProps {
-  className?: string;
   name: string;
   href: string;
   description: string;
@@ -16,11 +15,13 @@ export function ProjectCard({
   description,
   icon: Icon,
   href,
-  className,
 }: ProjectCardProps) {
   return (
-    <div className={className}>
-      <div className="flex h-12 w-12 items-center justify-center rounded-full bg-white shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5">
+    <div>
+      <div
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-white 
+      shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5"
+      >
         <Icon className="h-8 w-8" />
       </div>
 
