@@ -80,8 +80,8 @@ export default function HomePage() {
           contribute if you have ideas for how it can be improved.
         </p>
 
-        {/*  Project cards , we only want to show 2 projects here */}
-        {/*  We use the splice method to get the first 2 projects */}
+        {/*  Project cards , we only want to show 4 projects here */}
+        {/*  We use the splice method to get the first 4 projects */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-7">
           {/*  Since the array is a reference type, we need to create a new array to avoid mutating the original array */}
           {/*  by using the spread operator, we create a new array with the same elements */}
