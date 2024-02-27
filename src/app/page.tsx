@@ -11,6 +11,8 @@ export default function HomePage() {
   return (
     <>
       {/*  Hero section */}
+      {/*  First we create a section with a grid layout */}
+      {/*  We use the grid-cols-1 lg:grid-cols-2 classes to create a 1-column grid on small screens and a 2-column grid on large screens */}
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-9">
         <div>
           {/*  We use the Image component to load the avatar image */}
