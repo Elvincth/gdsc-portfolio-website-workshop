@@ -11,11 +11,18 @@ export default function HomePage() {
   return (
     <>
       {/*  Hero section */}
+      {/*  First, we define the grid layout where we want to have 12 columns */}
+      {/*  In large screens, we want to have a gap between the columns of 9 only in the x-axis */}
+      {/*  In smaller screens, we want to have a gap between the rows of 9 only in the y-axis */}
       <section className="grid grid-cols-12 lg:gap-x-9 gap-y-9">
+        {/*  For large screens, we want the avatar and the text to take 6 columns, so it takes half of the width */}
+        {/*  For smaller screens, we want the avatar and the text to take 12 columns , so it takes the full width */}
         <div className="lg:col-span-6 col-span-12">
+          {/*  We use the Image component to load the avatar image */}
           <Image
             src={avatarImage}
             alt="John Doe's avatar"
+            // We also give it a rounded border and a background color
             className="h-16 w-16 mt-6 rounded-full bg-zinc-100 object-cover"
             priority
           />
@@ -31,7 +38,9 @@ export default function HomePage() {
             real-world problems.
           </p>
 
-          <div className="flex gap-x-2 mt-6">
+          <div className="mt-6">
+            {/*  We use the Link component to create a link to the resume */}
+            {/*  The resume is a PDF file, so we use the href attribute to point to the file */}
             <Link href="/resume.pdf">
               <Button>
                 Download CV
