@@ -1,5 +1,11 @@
 import { IconBrandGithub } from "@tabler/icons-react";
 
+// Here is the list of projects that will be displayed on the home page.
+// This is a simple array of objects, where each object represents a project.
+// Each project has a name, description, href, and icon.
+// You can add more projects to this list by following the same pattern.
+// Also you can change the icon to any other icon from the Tabler Icons library.
+// See: https://tabler.io/icons
 export const projects = [
   {
     name: "CampusNav",
