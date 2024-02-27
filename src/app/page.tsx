@@ -85,6 +85,8 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-7">
           {/*  Since the array is a reference type, we need to create a new array to avoid mutating the original array */}
           {/*  by using the spread operator, we create a new array with the same elements */}
+          {/*  the map method is used to iterate over the projects array and create a ProjectCard component for each project */}
+          {/*  we also use the key prop to give each ProjectCard a unique key, react can keep track of the components to avoid unnecessary re-renders */}
           {[...projects].splice(0, 4).map((project, projectIndex) => (
             <ProjectCard
               key={projectIndex}
