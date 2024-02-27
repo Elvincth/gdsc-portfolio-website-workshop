@@ -47,6 +47,10 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/*  We use the Image component to load the hero image */}
+        {/*  We also give it a rounded border */}
+        {/*  We will add the rounded-lg class to the make the image rounded */}
+        {/*  Also for the parent div we will add the max-w-sm lg:max-w-none m-auto classes to center the image */}
         <div className="max-w-sm lg:max-w-none m-auto">
           <Image
             className="rounded-lg"
@@ -57,7 +61,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/*  About section */}
+      {/*  Project section */}
       <section className="mt-24">
         <h2 className="text-2xl font-bold text-zinc-800">My Projects</h2>
 
